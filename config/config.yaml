@@ -1,0 +1,23 @@
+interface: "[your interface]"
+version: "[your version]"
+username: "[your username]"
+password: "[your password]"
+
+login:
+  url: "https://[salesforce_interface]/services/Soap/u/[salesforce_version]"
+  xml: "./xml/login.xml"
+
+url:
+  base: "https://[salesforce_interface]/services/data/v[salesforce_version]/sobjects/"
+  describe: "https://[salesforce_interface]/services/data/v[salesforce_version]/sobjects/[salesforce_object]/describe"
+  job: "https://[salesforce_interface]/services/async/[salesforce_version]/job"
+  close: "https://[salesforce_interface]/services/async/[salesforce_version]/job/[salesforce_job_id]"
+  batch: "https://[salesforce_interface]/services/async/[salesforce_version]/job/[salesforce_job_id]/batch"
+  result: "https://[salesforce_interface]/services/async/[salesforce_version]/job/[salesforce_job_id]/batch/[salesforce_batch_id]/result"
+
+xml:
+  insert: "./xml/job_insert.xml"
+  update: "./xml/job_update.xml"
+  delete: "./xml/job_delete.xml"
+  close: "./xml/job_close.xml"
+
